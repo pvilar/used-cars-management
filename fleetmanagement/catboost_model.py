@@ -11,7 +11,7 @@ import warnings
 warnings.filterwarnings('ignore')
 import os
 
-logger = logging.getLogger("carnext")
+logger = logging.getLogger("fleetmanagement")
 
 class PredictSellPrice:
 	""" Class for predicting vehicle prices

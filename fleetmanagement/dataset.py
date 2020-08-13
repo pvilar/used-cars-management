@@ -9,7 +9,7 @@ import unidecode
 import warnings
 warnings.filterwarnings('ignore')
 
-logger = logging.getLogger("carnext")
+logger = logging.getLogger("fleetmanagement")
 
 def get_datasets(
 	vehicles_filepath: str = "../data/CASE_VEHICLES.csv",
