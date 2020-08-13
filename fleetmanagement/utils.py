@@ -4,7 +4,7 @@ import os
 import logging
 import seaborn as sns
 
-def set_logger(name: str = "carnext") -> logging.Logger:
+def set_logger(name: str = "fleetmanagement") -> logging.Logger:
     """
     Returns a formatted logger to use in scripts.
 

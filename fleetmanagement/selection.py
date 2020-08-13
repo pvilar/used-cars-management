@@ -6,7 +6,7 @@ import warnings
 warnings.filterwarnings('ignore')
 import os
 
-logger = logging.getLogger("carnext")
+logger = logging.getLogger("fleetmanagement")
 
 def select_cars(
 	df_merged: pd.DataFrame,
