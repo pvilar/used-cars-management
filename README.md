@@ -1,4 +1,4 @@
-# Carnext Data Science Case
+# Used Cars Management
 
 This project contains the code to answer the key question of the data science assignment.
 
