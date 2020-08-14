@@ -128,9 +128,7 @@ class PredictSellPrice:
 		plt.title('Learning curves')
 
 	def predict(self,
-				df_target: pd.DataFrame,
-				file_name: str = 'sell_price_prediction',
-				file_path: str = ''):
+				df_target: pd.DataFrame):
 
 		# predict on target data
 		y_pred = self.model.predict(df_target)
@@ -139,10 +137,6 @@ class PredictSellPrice:
 		df_target[self.target] = y_pred
 
 		self.df_target = df_target
-
-		# export to csv
-		output_file = os.path.join(file_path, file_name+'.csv')
-		df_target[[self.target]].to_csv(output_file)
 
 		return df_target
 

@@ -21,9 +21,7 @@ def select_cars(
 					'DAMAGE_COUNT',
 					'DAMAGE_CATEGORY',
 					'DAMAGE_LARGE_CATEGORY'],
-	N: int = 50,
-	file_name: str = 'vehicles_selection',
-	file_path: str = ''
+	N: int = 50
 ):
 
 	"""
@@ -63,10 +61,6 @@ def select_cars(
 
 	# sort by rank and get first N rows
 	df_selection = df_target.sort_values('RANK', ascending=False).head(N)
-
-	# export as csv
-	output_file = os.path.join(file_path, file_name+'.csv')
-	df_selection.to_csv(output_file)
 
 	return df_selection
 
