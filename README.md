@@ -74,6 +74,7 @@ model.plot_predictions()
 3. Select optimal subset of cars
 ```python
 from fleetmanagement.selection import select_cars, add_sell_price
+
 selected_vehicles = select_cars(df_merged, N=50)
 selected_vehicles = add_sell_price(selected_vehicles, df_predicted)
 selected_vehicles.to_csv("selected_vehicles.csv")
