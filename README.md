@@ -75,8 +75,7 @@ model.plot_predictions()
 ```python
 from fleetmanagement.selection import select_cars, add_sell_price
 
-selected_vehicles = select_cars(df_merged, N=50)
-selected_vehicles = add_sell_price(selected_vehicles, df_predicted)
+selected_vehicles = select_cars(df_merged, df_predicted, N=50)
 selected_vehicles.to_csv("selected_vehicles.csv")
 ```
 

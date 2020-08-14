@@ -10,6 +10,7 @@ logger = logging.getLogger("fleetmanagement")
 
 def select_cars(
 	df_merged: pd.DataFrame,
+	df_prediction: pd.DataFrame,
 	demand_vars: list = [
 					'MAKE',
 					'FUELTYPE',
@@ -62,13 +63,10 @@ def select_cars(
 	# sort by rank and get first N rows
 	df_selection = df_target.sort_values('RANK', ascending=False).head(N)
 
-	return df_selection
-
-def add_sell_price(df_selection, df_prediction):
-
+	# adding sell price predictions
 	df_selection = pd.merge(df_selection.drop('SELLPRICE_CAR', axis=1),
                          df_prediction[['SELLPRICE_CAR']].reset_index(), how='left')
-	
+
 	return df_selection
 
 def _demand_rank(df_b2c, df_target, demand_vars):
