@@ -27,7 +27,7 @@ The business problem is solved in a two step process:
 
 [This table]('data/CASE_DAMAGE_LABELS_INFO.xlsx') contains a description for some of the features.
 
-The model chosen for this regression analysis is a tree-based algorithm with gradient boosting: [CatBoost model]('https://catboost.ai/docs/concepts/python-reference_catboostregressor.html')
+The model chosen for this regression analysis is a tree-based algorithm with gradient boosting: [CatBoost model](https://catboost.ai/docs/concepts/python-reference_catboostregressor.html)
 
 2. **Select** the optimal 50 cars from the subset of 150 that will be sold B2C based on demand and damage criteria:
 
